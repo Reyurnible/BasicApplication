@@ -2,14 +2,10 @@ package com.zeroone_creative.basicapplication.view.activity;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.zeroone_creative.basicapplication.R;
+import com.zeroone_creative.basicapplication.view.fragment.MainFragment_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -18,9 +14,15 @@ import org.androidannotations.annotations.EActivity;
 public class MainActivity extends Activity {
 
     @AfterViews
-    public void setFragment(){
-        getFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
+    public void afterViews(){
+        setFragment();
     }
+
+    private void setFragment(){
+        Fragment fragment = MainFragment_.builder().build();
+        getFragmentManager().beginTransaction().add(R.id.container, fragment).commit();
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -29,31 +31,4 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
-    }
 }
