@@ -14,8 +14,20 @@ android {
     }
     buildTypes {
         release {
-            runProguard false
+            //runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
         }
     }
 }
@@ -30,6 +42,9 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:21.0.+'
     compile 'com.android.support:support-v13:21.0.+'
 
+    //Google Play Service
+    //compile 'com.google.android.gms:play-services:6.5.+'
+
     //Android annotation
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
@@ -37,6 +52,7 @@ dependencies {
     //Network Library
     compile 'com.mcxiaoke.volley:library:1.0.+'
     compile 'com.squareup.picasso:picasso:2.3.+'
+    compile 'org.apache.httpcomponents:httpcore:4.3.+'
     compile 'org.apache.httpcomponents:httpmime:4.3.+'
 
     //UI
@@ -50,7 +66,7 @@ dependencies {
 
 apt {
     arguments {
-        androidManifestFile variant.processResources.manifestFile
+        androidManifestFile variant.outputs[0].processResources.manifestFile
         resourcePackageName 'com.zeroone_creative.basicapplication'
     }
 }

@@ -20,6 +20,10 @@
             android:name=".view.activity.PagerActivity_"
             android:label="@string/title_activity_drawer" >
         </activity>
+        <activity
+            android:name=".view.activity.WelcomeActivity_"
+            android:label="@string/title_activity_drawer" >
+        </activity>
     </application>
 
 </manifest>

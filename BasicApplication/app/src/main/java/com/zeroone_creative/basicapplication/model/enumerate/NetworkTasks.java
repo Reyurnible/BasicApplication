@@ -1,4 +1,4 @@
-package com.zeroone_creative.basicapplication.controller.provider;
+package com.zeroone_creative.basicapplication.model.enumerate;
 
 public enum NetworkTasks {
 

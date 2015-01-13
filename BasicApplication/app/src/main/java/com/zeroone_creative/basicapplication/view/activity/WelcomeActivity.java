@@ -19,9 +19,17 @@ import android.app.Activity;
 
 import com.zeroone_creative.basicapplication.R;
 
+import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.NoTitle;
 
+@NoTitle
 @EActivity(R.layout.activity_welcome)
 public class WelcomeActivity extends Activity {
+
+    @AfterViews
+    void onAfterViews() {
+
+    }
 
 }
