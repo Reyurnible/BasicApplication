@@ -7,7 +7,7 @@ import android.net.Uri;
  */
 public class UriUtil {
 
-    static private String baseUrl = "www.pictcake.jp";
+    static private String baseUrl = "www.sample.jp";
 
     static private Uri.Builder getBaseUri(){
         Uri.Builder builder = new Uri.Builder();
@@ -15,32 +15,11 @@ public class UriUtil {
         builder.encodedAuthority(baseUrl);
         return builder;
     }
-
-    static public String orderCakeUri() {
+    
+    static public String getSampleUri() {
         Uri.Builder builder = getBaseUri();
         //叩く先のAPI
-        builder.path("/api/upload");
-        return builder.build().toString();
-    }
-
-    static public String getStampCategoryUri() {
-        Uri.Builder builder = getBaseUri();
-        //叩く先のAPI
-        builder.path("/api/stamps/categories.json");
-        return builder.build().toString();
-    }
-
-    static public String getStampUri(String categoryId) {
-        Uri.Builder builder = getBaseUri();
-        //叩く先のAPI
-        builder.path("/api/stamps/"+categoryId+".json");
-        return builder.build().toString();
-    }
-
-    static public String getDeliveryDayUri() {
-        Uri.Builder builder = getBaseUri();
-        //叩く先のAPI
-        builder.path("/api/delivery.json");
+        builder.path("/api/sample.json");
         return builder.build().toString();
     }
 

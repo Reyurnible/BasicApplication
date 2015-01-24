@@ -5,4 +5,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_regist">RegistActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
 </resources>
