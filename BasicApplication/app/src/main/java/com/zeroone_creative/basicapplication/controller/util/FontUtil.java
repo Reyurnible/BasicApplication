@@ -19,6 +19,7 @@ public class FontUtil {
     /**
      * assetにある.ttfか.zipのファイルからフォントを取得する。
      * パスはフルパス　font/フィアル名
+     *
      * @param fontFilePath
      * @param context
      * @return
@@ -34,6 +35,7 @@ public class FontUtil {
 
     /**
      * フォントファイルをassetから取得する。
+     *
      * @param fontFileName
      * @param context
      * @return
@@ -46,6 +48,7 @@ public class FontUtil {
     /**
      * zip圧縮されているフォントファイルをassetから解凍し、dataフォルダに格納する
      * assetのファイルはある程度大きいとzip圧縮されていないとAndroidで認識してくれない
+     *
      * @param fontFileName
      * @param context
      * @return
@@ -63,7 +66,7 @@ public class FontUtil {
                 zipFile = new File(context.getFilesDir(), ze.getName());
 
                 //フォントがすでに解凍されていればなにもしない
-                if(zipFile.exists()){
+                if (zipFile.exists()) {
                     return Typeface.createFromFile(zipFile.getPath());
                 }
                 FileOutputStream fos = new FileOutputStream(zipFile, false);
@@ -79,7 +82,7 @@ public class FontUtil {
             zis.close();
         } catch (Exception e) {
             Log.e("FontUtil", "font extract fail", e);
-            if (zipFile!=null && zipFile.exists())
+            if (zipFile != null && zipFile.exists())
                 zipFile.delete();
         }
         return ret;

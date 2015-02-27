@@ -72,13 +72,16 @@ public class MultipartRequest extends Request<String> {
 
     /**
      * 優先順位を設定する
+     *
      * @param priority 優先順位設定
      */
     public void setPriority(final Priority priority) {
         this.mPriority = priority;
     }
+
     /**
      * 現在の優先順位を返却する
+     *
      * @return 優先順位
      */
     public Priority getPriority() {

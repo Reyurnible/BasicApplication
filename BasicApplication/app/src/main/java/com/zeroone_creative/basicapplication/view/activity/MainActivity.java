@@ -13,11 +13,11 @@ import org.androidannotations.annotations.EActivity;
 public class MainActivity extends Activity {
 
     @AfterViews
-    public void onAfterViews(){
+    public void onAfterViews() {
         setFragment();
     }
 
-    private void setFragment(){
+    private void setFragment() {
         Fragment fragment = MainFragment_.builder().build();
         getFragmentManager().beginTransaction().add(R.id.container, fragment).commit();
     }

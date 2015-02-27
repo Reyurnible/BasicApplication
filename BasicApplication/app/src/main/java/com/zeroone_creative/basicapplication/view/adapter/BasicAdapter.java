@@ -42,13 +42,13 @@ public class BasicAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        if(convertView==null){
+        if (convertView == null) {
             convertView = mInflater.inflate(R.layout.item_basicadapter, null);
             holder = new ViewHolder();
             holder.textView = (TextView) convertView.findViewById(R.id.basicadapter_textview);
             convertView.setTag(holder);
-        }else{
-            holder = (ViewHolder)convertView.getTag();
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
         holder.textView.setText(Integer.toString(position));
@@ -56,7 +56,7 @@ public class BasicAdapter extends BaseAdapter {
         return convertView;
     }
 
-    private class ViewHolder{
+    private class ViewHolder {
         TextView textView;
     }
 

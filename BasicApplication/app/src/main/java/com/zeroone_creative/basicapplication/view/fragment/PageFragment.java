@@ -10,8 +10,8 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.FragmentArg;
 import org.androidannotations.annotations.ViewById;
 
-@EFragment(R.layout.fragment_pager)
-public class PagerFragment extends Fragment {
+@EFragment(R.layout.fragment_page)
+public class PageFragment extends Fragment {
 
     @FragmentArg("section_number")
     int mSectionNumber;
@@ -21,7 +21,7 @@ public class PagerFragment extends Fragment {
 
     @AfterViews
     void setUI() {
-        mLabelTextView.setText("SectionNumber:"+Integer.toString(mSectionNumber));
+        mLabelTextView.setText("SectionNumber:" + Integer.toString(mSectionNumber));
     }
 
 }

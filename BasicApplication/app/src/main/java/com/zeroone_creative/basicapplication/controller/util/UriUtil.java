@@ -9,13 +9,13 @@ public class UriUtil {
 
     static private String baseUrl = "www.sample.jp";
 
-    static private Uri.Builder getBaseUri(){
+    static private Uri.Builder getBaseUri() {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("http");
         builder.encodedAuthority(baseUrl);
         return builder;
     }
-    
+
     static public String getSampleUri() {
         Uri.Builder builder = getBaseUri();
         //叩く先のAPI

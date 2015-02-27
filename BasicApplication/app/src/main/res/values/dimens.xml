@@ -1,34 +1,27 @@
-<!--
-  Copyright 2014 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-  -->
 <resources>
+    <!-- Common -->
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
-
-    <!-- body content -->
+    <dimen name="element_spacing_large">12dp</dimen>
     <dimen name="element_spacing_normal">8dp</dimen>
-    <dimen name="content_padding_normal">16dp</dimen>
+    <dimen name="element_spacing_small">4dp</dimen>
+    <dimen name="view_height_large">64dp</dimen>
+    <dimen name="view_height_normal">48dp</dimen>
+    <dimen name="view_height_small">36dp</dimen>
+    <dimen name="view_height_tiny">24dp</dimen>
+
+    <!-- Dialog Content -->
+    <dimen name="dialog_content_horizontal_margin">8dp</dimen>
+    <dimen name="dialog_content_vertical_margin">8dp</dimen>
+    <!-- Layout Property-->
+    <dimen name="card_corner_radius">2dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <!-- Text Size Property -->
     <dimen name="text_size_xsmall">11sp</dimen>
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium">14sp</dimen>
     <dimen name="text_size_large">18sp</dimen>
     <dimen name="text_size_xlarge">20sp</dimen>
     <dimen name="text_size_diff_large_small">6sp</dimen>
-    <dimen name="speaker_image_size">40dp</dimen>
-
-    <dimen name="card_corner_radius">2dp</dimen>
-    <dimen name="card_elevation">2dp</dimen>
 
 </resources>

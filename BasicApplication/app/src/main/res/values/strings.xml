@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- App Name-->
     <string name="app_name">BasicApplication</string>
+    <!-- Page Titles (title_(class name)_(page name))-->
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_drawer">DrawerActivity</string>
-    <string name="title_activity_welcome">WelcomeActivity</string>
-    <string name="title_activity_regist">RegistActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_pager">DrawerActivity</string>
+
+    <!-- PageParams -->
+    <!-- Common -->
+
+    <!-- (PageName) -->
+
+    <!-- Dialog Fragment -->
+    <string name="dialog_positive_button">OK</string>
+    <string name="dialog_negative_button">キャンセル</string>
 
 </resources>

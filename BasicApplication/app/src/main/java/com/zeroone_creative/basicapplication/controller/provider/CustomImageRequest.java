@@ -16,34 +16,40 @@
 
 package com.zeroone_creative.basicapplication.controller.provider;
 
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
+import android.graphics.BitmapFactory;
+
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.Response;
-import com.android.volley.VolleyLog;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Bitmap.Config;
+import com.android.volley.VolleyLog;
 
 /**
  * A canned request for getting an image at a given URL and calling
  * back with a decoded Bitmap.
  */
 public class CustomImageRequest extends Request<Bitmap> {
-	
-	private Priority mPriority = Priority.LOW;
-	
-	/** Socket timeout in milliseconds for image requests */
+
+    private Priority mPriority = Priority.LOW;
+
+    /**
+     * Socket timeout in milliseconds for image requests
+     */
     private static final int IMAGE_TIMEOUT_MS = 1500;
 
-    /** Default number of retries for image requests */
+    /**
+     * Default number of retries for image requests
+     */
     private static final int IMAGE_MAX_RETRIES = 2;
 
-    /** Default backoff multiplier for image requests */
+    /**
+     * Default backoff multiplier for image requests
+     */
     private static final float IMAGE_BACKOFF_MULT = 2f;
 
     private final Listener<Bitmap> mListener;
@@ -51,7 +57,9 @@ public class CustomImageRequest extends Request<Bitmap> {
     private final int mMaxWidth;
     private final int mMaxHeight;
 
-    /** Decoding lock so that we don't decode more than one image at a time (to avoid OOM's) */
+    /**
+     * Decoding lock so that we don't decode more than one image at a time (to avoid OOM's)
+     */
     private static final Object sDecodeLock = new Object();
 
     /**
@@ -63,57 +71,59 @@ public class CustomImageRequest extends Request<Bitmap> {
      * be fit in the rectangle of dimensions width x height while keeping its
      * aspect ratio.
      *
-     * @param url URL of the image
-     * @param listener Listener to receive the decoded bitmap
-     * @param maxWidth Maximum width to decode this bitmap to, or zero for none
-     * @param maxHeight Maximum height to decode this bitmap to, or zero for
-     *            none
-     * @param decodeConfig Format to decode the bitmap to
+     * @param url           URL of the image
+     * @param listener      Listener to receive the decoded bitmap
+     * @param maxWidth      Maximum width to decode this bitmap to, or zero for none
+     * @param maxHeight     Maximum height to decode this bitmap to, or zero for
+     *                      none
+     * @param decodeConfig  Format to decode the bitmap to
      * @param errorListener Error listener, or null to ignore errors
-     * @param priority Request priority
+     * @param priority      Request priority
      */
     public CustomImageRequest(String url, Listener<Bitmap> listener,
-			int maxWidth, int maxHeight, Config decodeConfig,
-			ErrorListener errorListener,Priority priority) {
-    	super(Method.GET, url, errorListener);
+                              int maxWidth, int maxHeight, Config decodeConfig,
+                              ErrorListener errorListener, Priority priority) {
+        super(Method.GET, url, errorListener);
         setRetryPolicy(
                 new DefaultRetryPolicy(IMAGE_TIMEOUT_MS, IMAGE_MAX_RETRIES, IMAGE_BACKOFF_MULT));
         mListener = listener;
         mDecodeConfig = decodeConfig;
         mMaxWidth = maxWidth;
         mMaxHeight = maxHeight;
-		setPriority(priority);
-	}
-    
+        setPriority(priority);
+    }
+
     /**
-	 * 優先順位を設定する
-	 * @param priority 優先順位設定
-	 */
-	public void setPriority(final Priority priority) {
-		this.mPriority = priority;
-	}
+     * 優先順位を設定する
+     *
+     * @param priority 優先順位設定
+     */
+    public void setPriority(final Priority priority) {
+        this.mPriority = priority;
+    }
+
     /**
      * 優先度を返すメソッド
      */
-	@Override
+    @Override
     public Priority getPriority() {
-		//アイテム詳細のところの読み込みだけに使用する。
+        //アイテム詳細のところの読み込みだけに使用する。
         return mPriority;
     }
-    
+
     /**
      * Scales one side of a rectangle to fit aspect ratio.
      *
-     * @param maxPrimary Maximum size of the primary dimension (i.e. width for
-     *        max width), or zero to maintain aspect ratio with secondary
-     *        dimension
-     * @param maxSecondary Maximum size of the secondary dimension, or zero to
-     *        maintain aspect ratio with primary dimension
-     * @param actualPrimary Actual size of the primary dimension
+     * @param maxPrimary      Maximum size of the primary dimension (i.e. width for
+     *                        max width), or zero to maintain aspect ratio with secondary
+     *                        dimension
+     * @param maxSecondary    Maximum size of the secondary dimension, or zero to
+     *                        maintain aspect ratio with primary dimension
+     * @param actualPrimary   Actual size of the primary dimension
      * @param actualSecondary Actual size of the secondary dimension
      */
     private static int getResizedDimension(int maxPrimary, int maxSecondary, int actualPrimary,
-            int actualSecondary) {
+                                           int actualSecondary) {
         // If no dominant value at all, just return the actual.
         if (maxPrimary == 0 && maxSecondary == 0) {
             return actualPrimary;
@@ -149,6 +159,7 @@ public class CustomImageRequest extends Request<Bitmap> {
             }
         }
     }
+
     /**
      * The real guts of parseNetworkResponse. Broken out for readability.
      */
@@ -177,9 +188,9 @@ public class CustomImageRequest extends Request<Bitmap> {
             // TODO(ficus): Do we need this or is it okay since API 8 doesn't support it?
             // decodeOptions.inPreferQualityOverSpeed = PREFER_QUALITY_OVER_SPEED;
             decodeOptions.inSampleSize =
-                findBestSampleSize(actualWidth, actualHeight, desiredWidth, desiredHeight);
+                    findBestSampleSize(actualWidth, actualHeight, desiredWidth, desiredHeight);
             Bitmap tempBitmap =
-                BitmapFactory.decodeByteArray(data, 0, data.length, decodeOptions);
+                    BitmapFactory.decodeByteArray(data, 0, data.length, decodeOptions);
 
             // If necessary, scale down to the maximal acceptable size.
             if (tempBitmap != null && (tempBitmap.getWidth() > desiredWidth ||
@@ -195,7 +206,7 @@ public class CustomImageRequest extends Request<Bitmap> {
         if (bitmap == null) {
             return Response.error(new ParseError(response));
         } else {
-        	return Response.success(bitmap, ImageHttpHeaderParser.parseIgnoreCacheHeaders(response));
+            return Response.success(bitmap, ImageHttpHeaderParser.parseIgnoreCacheHeaders(response));
         }
     }
 
@@ -208,9 +219,9 @@ public class CustomImageRequest extends Request<Bitmap> {
      * Returns the largest power-of-two divisor for use in downscaling a bitmap
      * that will not result in the scaling past the desired dimensions.
      *
-     * @param actualWidth Actual width of the bitmap
-     * @param actualHeight Actual height of the bitmap
-     * @param desiredWidth Desired width of the bitmap
+     * @param actualWidth   Actual width of the bitmap
+     * @param actualHeight  Actual height of the bitmap
+     * @param desiredWidth  Desired width of the bitmap
      * @param desiredHeight Desired height of the bitmap
      */
     // Visible for testing.

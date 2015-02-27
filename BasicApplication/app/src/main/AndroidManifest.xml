@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zeroone_creative.basicapplication" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="ANDROID.PERMISSION.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -18,15 +21,7 @@
         </activity>
         <activity
             android:name=".view.activity.PagerActivity_"
-            android:label="@string/title_activity_drawer" >
-        </activity>
-        <activity
-            android:name=".view.activity.WelcomeActivity_"
-            android:label="@string/title_activity_drawer" >
-        </activity>
-        <activity
-            android:name=".RegistActivity"
-            android:label="@string/title_activity_regist" >
+            android:label="@string/title_activity_pager" >
         </activity>
     </application>
 

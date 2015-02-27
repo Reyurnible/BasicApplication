@@ -4,19 +4,55 @@ def AAVersion = '3.0.1'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.0.0"
+    buildToolsVersion '21.1.0'
 
     defaultConfig {
-        applicationId "com.zeroone_creative.basicapplication"
-        minSdkVersion 16
+        applicationId 'com.zeroone_creative.basicapplication'
+        minSdkVersion 15
         versionCode 1
-        versionName "1.0"
+        versionName '1.0'
     }
     buildTypes {
+        debug {
+            debuggable true
+            // デバッグ用のパッケージのパッケージ名に接尾辞を付ける
+            applicationIdSuffix  '.debug'
+            versionNameSuffix 'a'
+        }
         release {
-            //runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    // 別のアプリを出す場合に使用
+    // プロダクトフレーバー. それぞれのアプリのパッケージ名と使用する証明書を定義
+    productFlavors {
+        /*
+        hoge {
+            applicationId = 'com.zerocre.hoge'
+            signingConfig signingConfigs.hoge
+        }
+        fuga {
+            applicationId = 'com.zerocre.fuga'
+            signingConfig signingConfigs.fuga
+        }
+        */
+    }
+    signingConfigs {
+        /*
+        hoge {
+            keyAlias 'hoge'
+            keyPassword 'hoge'
+            storeFile file('../etc/keystore/hoge.keystore')  // 対象の位置に証明書を用意すること
+            storePassword 'hoge'
+        }
+        fuga {
+            keyAlias 'fuga'
+            keyPassword 'fuga'
+            storeFile file('../etc/keystore/fuga.keystore')
+            storePassword 'fuga'
+        }
+         */
     }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'

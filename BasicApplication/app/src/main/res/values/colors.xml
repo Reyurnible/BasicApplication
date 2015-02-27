@@ -21,20 +21,4 @@
     <!-- Common System Color -->
     <color name="transparent">#00000000</color>
 
-    <!-- Navdrawer -->
-    <color name="navdrawer_background">#ffffffff</color>
-    <color name="navdrawer_text_color">@color/primary_text</color>
-    <color name="navdrawer_text_color_selected">@color/primary</color>
-    <color name="navdrawer_icon_tint">#888</color>
-    <color name="navdrawer_icon_tint_selected">@color/primary</color>
-
-    <color name="refresh_progress_1">@color/accent_2</color>
-    <color name="refresh_progress_2">@color/accent</color>
-    <color name="refresh_progress_3">@color/primary</color>
-
-    <color name="data_item_background_light">#ffffff</color>
-    <color name="data_item_lightbg_title">#404040</color>
-    <color name="data_item_lightbg_body_text">#707070</color>
-    <color name="data_item_lightbg_dim_text">#e0e0e0</color>
-
 </resources>
