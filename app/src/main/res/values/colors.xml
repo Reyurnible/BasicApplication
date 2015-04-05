@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme -->
+        <!-- Primary -->
+        <color name="primary">#3f51b5</color>
+        <color name="primary_light">#7986cb</color>
+        <color name="primary_dark">#303f9f</color>
+        <!-- Accent...1...2...3 -->
+        <color name="accent">#00b0ff</color>
+        <color name="accent_light">#8ad4fa</color>
+        <color name="accent_2">#e91e63</color>
+    <!-- /Theme -->
+
+    <!-- Text -->
+        <color name="primary_text">#de000000</color>
+        <color name="accent_text">#8a000000</color>
+        <color name="body_text_3">#60000000</color>
+        <color name="body_text_disabled">#44000000</color>
+
+    <!-- Common System Color -->
+    <color name="transparent">#00000000</color>
+
+</resources>

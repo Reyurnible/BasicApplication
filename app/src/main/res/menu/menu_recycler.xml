@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zeroone_creative.basicapplication.view.activity.RecyclerActivity">
+
+    <item
+        android:id="@+id/action_change_horizontal_card"
+        android:title="@string/action_change_horizontal_card"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_change_recycler"
+        android:title="@string/action_change_recycler"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_change_vertical"
+        android:title="@string/action_change_vertical"
+        app:showAsAction="never" />
+
+</menu>

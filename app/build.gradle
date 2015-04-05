@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+def AAVersion = '3.0.1'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.0'
+
+    defaultConfig {
+        applicationId 'com.zeroone_creative.basicapplication'
+        minSdkVersion 15
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            // デバッグ用のパッケージのパッケージ名に接尾辞を付ける
+            applicationIdSuffix  '.debug'
+            versionNameSuffix 'a'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // 別のアプリを出す場合に使用
+    // プロダクトフレーバー. それぞれのアプリのパッケージ名と使用する証明書を定義
+    productFlavors {
+        /*
+        hoge {
+            applicationId = 'com.zerocre.hoge'
+            signingConfig signingConfigs.hoge
+        }
+        fuga {
+            applicationId = 'com.zerocre.fuga'
+            signingConfig signingConfigs.fuga
+        }
+        */
+    }
+    signingConfigs {
+        /*
+        hoge {
+            keyAlias 'hoge'
+            keyPassword 'hoge'
+            storeFile file('../etc/keystore/hoge.keystore')  // 対象の位置に証明書を用意すること
+            storePassword 'hoge'
+        }
+        fuga {
+            keyAlias 'fuga'
+            keyPassword 'fuga'
+            storeFile file('../etc/keystore/fuga.keystore')
+            storePassword 'fuga'
+        }
+         */
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //SupportLibrary
+    compile 'com.android.support:support-v4:21.0.+'
+    compile 'com.android.support:appcompat-v7:21.0.+'
+    compile 'com.android.support:palette-v7:21.0.+'
+    compile 'com.android.support:cardview-v7:21.0.+'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'com.android.support:support-v13:21.0.+'
+
+    //Google Play Service
+    //compile 'com.google.android.gms:play-services:6.5.+'
+
+    //Android annotation
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+
+    //Network Library
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'com.squareup.picasso:picasso:2.3.+'
+    compile 'org.apache.httpcomponents:httpcore:4.3.+'
+    compile 'org.apache.httpcomponents:httpmime:4.3.+'
+
+    //UI
+    //Ripple Effects
+    //compile 'com.github.traex.rippleeffect:library:1.2.+'
+    //Glide(Git and Animation loader)[https://github.com/bumptech/glide]
+    //compile 'com.github.bumptech.glide:glide:3.4.+'
+    //compile 'com.github.bumptech.glide:volley-integration:1.1.+'
+
+    //Realm
+    //compile 'io.realm:realm-android:0.71.+'
+
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        resourcePackageName 'com.zeroone_creative.basicapplication'
+    }
+}
