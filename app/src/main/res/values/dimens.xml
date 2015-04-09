@@ -10,19 +10,23 @@
     <dimen name="view_height_small">36dp</dimen>
     <dimen name="view_height_tiny">24dp</dimen>
 
+    <!-- Shape -->
+    <dimen name="button_radius">8dp</dimen>
+
     <!-- Dialog Content -->
     <dimen name="dialog_content_horizontal_margin">8dp</dimen>
     <dimen name="dialog_content_vertical_margin">8dp</dimen>
     <!-- Layout Property-->
     <dimen name="card_corner_radius">2dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
-    <!-- Text Size Property -->
+    <!-- Text Size -->
+    <dimen name="text_size_diff_large_small">6sp</dimen>
     <dimen name="text_size_xsmall">11sp</dimen>
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium">14sp</dimen>
     <dimen name="text_size_large">18sp</dimen>
     <dimen name="text_size_xlarge">20sp</dimen>
-    <dimen name="text_size_diff_large_small">6sp</dimen>
+
 
     <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html -->

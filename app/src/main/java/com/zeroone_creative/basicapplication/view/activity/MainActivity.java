@@ -2,12 +2,14 @@ package com.zeroone_creative.basicapplication.view.activity;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
 
 import com.zeroone_creative.basicapplication.R;
+import com.zeroone_creative.basicapplication.controller.util.SharedPreferencesUtil;
 import com.zeroone_creative.basicapplication.view.fragment.LocationManagerFragment;
 import com.zeroone_creative.basicapplication.view.fragment.MainFragment_;
 
