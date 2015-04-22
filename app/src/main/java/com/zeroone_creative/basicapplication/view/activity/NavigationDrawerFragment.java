@@ -95,7 +95,7 @@ public class NavigationDrawerFragment extends Fragment {
                 getActivity(),
                 mDrawerLayout,
                 true,
-                R.drawable.ic_drawer_open,
+                R.drawable.ic_drawer,
                 R.string.drawer_open,
                 R.string.drawer_close
         ) {

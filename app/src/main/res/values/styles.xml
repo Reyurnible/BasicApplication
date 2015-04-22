@@ -1,8 +1,23 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!-- TextAppearance Style -->
+    <style name="TextAppearance.Custom" parent="@style/TextAppearance.AppCompat">
+        <!-- SetColor No -->
+        <item name="@android:textSize">@dimen/text_size_medium</item>
+        <!--
+        <item name="fontFamily">@string/font_family_body_1_material</item>
+        -->
+    </style>
 
+    <style name="TextAppearance.Custom.Button" parent="@style/TextAppearance.AppCompat.Button">
+        <item name="@android:textSize">@dimen/text_size_large</item>
+        <item name="@android:textAllCaps">true</item>
+        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.Button" parent="@style/TextAppearance.Custom.Button" />
 
+    <!-- Bordered ink button -->
+    <style name="Widget.Custom.Button" parent="@style/Widget.AppCompat.Light.ActionButton">
+        <item name="@android:background">@drawable/bg_button</item>
+        <item name="@android:textAppearance">?attr/android:textAppearanceButton</item>
     </style>
 </resources>

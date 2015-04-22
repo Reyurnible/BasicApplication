@@ -10,8 +10,14 @@
     <dimen name="view_height_small">36dp</dimen>
     <dimen name="view_height_tiny">24dp</dimen>
 
-    <!-- Shape -->
-    <dimen name="button_radius">8dp</dimen>
+    <!-- Button -->
+        <!-- Shape -->
+        <dimen name="button_radius">8dp</dimen>
+        <dimen name="button_padding_horizontal">8dp</dimen>
+        <dimen name="button_padding_vertical">4dp</dimen>
+        <!-- Button Inset Action -->
+        <dimen name="button_inset_action_pressed">4dp</dimen>
+        <dimen name="button_inset_action_hovered">2dp</dimen>
 
     <!-- Dialog Content -->
     <dimen name="dialog_content_horizontal_margin">8dp</dimen>
@@ -26,7 +32,6 @@
     <dimen name="text_size_medium">14sp</dimen>
     <dimen name="text_size_large">18sp</dimen>
     <dimen name="text_size_xlarge">20sp</dimen>
-
 
     <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html -->
