@@ -22,7 +22,7 @@ public class MainFragment extends Fragment {
     void movePager() {
         Intent intent = new Intent(getActivity().getApplicationContext(), PagerActivity_.class);
         startActivity(intent);
-    }
+}
 
     @Click(R.id.main_button_recycler)
     void moveRecycler() {

@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- App Color -->
 <resources>
-    <!-- Theme -->
-        <!-- Primary -->
-        <color name="primary">#00BCD4</color>
-        <color name="primary_dark">#0097A7</color>
-        <color name="primary_light">#B2EBF2</color>
-            <!-- Primary Action Color -->
-            <color name="primary_action_disable">#8800BCD4</color>
-            <color name="primary_action_pressed">@color/accent</color>
-            <color name="primary_action_focused">#00BCD4</color>
-        <!-- Accent...secondary...thirdry -->
-        <color name="accent">#448AFF</color>
-        <color name="secondary_accent">#CDDC39</color>
-    <!-- /Theme -->
-
-    <!-- Text -->
-        <color name="primary_text">#212121</color>
-        <color name="primary_text_inverse">#ffffff</color>
-        <color name="secondary_text">#727272</color>
-        <color name="secondary_text_inverse">#9d9d9d</color>
-        <color name="body_text">#60000000</color>
-        <color name="body_text_disabled">#44000000</color>
+    <!-- Primary -->
+    <color name="primary">#00BCD4</color>
+    <color name="primary_dark">#0097A7</color>
+    <color name="primary_light">#B2EBF2</color>
+    <!-- Primary Action Color -->
+    <color name="primary_action_disable">#5500BCD4</color>
+    <color name="primary_action_pressed">#0099cc</color>
+    <color name="primary_action_focused">#00BCD4</color>
+    <!-- Accent...secondary...thirdry -->
+    <color name="accent">#448AFF</color>
+    <color name="secondary_accent">#CDDC39</color>
 
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
 
 
+    <!-- Ghost Button Color -->
+    <color name="ghost_normal">#ffffff</color>
+    <color name="ghost_pressed">#6fff</color>
+    <color name="ghost_disable">#44b6b6b6</color>
 
 </resources>

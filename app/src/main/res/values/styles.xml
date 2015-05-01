@@ -1,23 +1,279 @@
 <resources>
-    <!-- TextAppearance Style -->
+    <!-- Text styles -->
     <style name="TextAppearance.Custom" parent="@style/TextAppearance.AppCompat">
-        <!-- SetColor No -->
-        <item name="@android:textSize">@dimen/text_size_medium</item>
-        <!--
-        <item name="fontFamily">@string/font_family_body_1_material</item>
-        -->
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+        <item name="@android:textColorHint">?attr/android:textColorHint</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlight</item>
+        <item name="@android:textColorLink">?attr/android:textColorLink</item>
+        <item name="@android:textSize">@dimen/text_size_body_1</item>
     </style>
 
-    <style name="TextAppearance.Custom.Button" parent="@style/TextAppearance.AppCompat.Button">
-        <item name="@android:textSize">@dimen/text_size_large</item>
-        <item name="@android:textAllCaps">true</item>
+    <style name="TextAppearance.Custom.Headline">
+        <item name="@android:textSize">@dimen/text_size_headline</item>
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Title">
+        <item name="@android:textSize">@dimen/text_size_title</item>
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Title.Inverse">
+        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
+        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Subhead">
+        <item name="@android:textSize">@dimen/text_size_subhead</item>
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Subhead.Inverse">
+        <item name="@android:textColor">?attr/android:textColorSecondaryInverse</item>
+        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Body2">
+        <item name="@android:textSize">@dimen/text_size_body_2</item>
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Body1">
+        <item name="@android:textSize">@dimen/text_size_body_1</item>
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Caption">
+        <item name="@android:textSize">@dimen/text_size_caption</item>
+        <item name="@android:textColor">?attr/android:textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Menu">
+        <item name="@android:textSize">@dimen/text_size_menu</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Menu.Inverse">
+        <item name="@android:textColor">?attr/android:textColorSecondaryInverse</item>
+        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Button">
+        <item name="@android:textSize">@dimen/text_size_button</item>
+        <item name="@android:textAllCaps">false</item>
         <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
     </style>
+
+    <!-- Deprecated text styles -->
+    <style name="TextAppearance.Custom.Inverse">
+        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
+        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Large">
+        <item name="@android:textSize">@dimen/text_size_large</item>
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Large.Inverse">
+        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
+        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Medium">
+        <item name="@android:textSize">@dimen/text_size_medium</item>
+        <item name="@android:textColor">?attr/android:textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Medium.Inverse">
+        <item name="@android:textColor">?attr/android:textColorSecondaryInverse</item>
+        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse
+        </item>
+        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Small">
+        <item name="@android:textSize">@dimen/text_size_small</item>
+        <item name="@android:textColor">?attr/android:textColorTertiary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Small.Inverse">
+        <item name="@android:textColor">?attr/android:textColorTertiaryInverse</item>
+        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse
+        </item>
+        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget" />
     <style name="TextAppearance.Custom.Widget.Button" parent="@style/TextAppearance.Custom.Button" />
 
-    <!-- Bordered ink button -->
-    <style name="Widget.Custom.Button" parent="@style/Widget.AppCompat.Light.ActionButton">
-        <item name="@android:background">@drawable/bg_button</item>
+    <style name="TextAppearance.Custom.Widget.EditText">
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+        <item name="@android:textColorHint">?attr/android:textColorHint</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget.Switch" parent="TextAppearance.Custom.Button" />
+
+    <style name="TextAppearance.Custom.Widget.PopupMenu"/>
+    <style name="TextAppearance.Custom.Widget.PopupMenu.Large" parent="TextAppearance.Custom.Menu" />
+    <style name="TextAppearance.Custom.Widget.PopupMenu.Small" parent="TextAppearance.Custom.Menu" />
+
+    <style name="TextAppearance.Custom.Widget.DropDownHint" parent="TextAppearance.Custom.Menu" />
+
+    <style name="TextAppearance.Custom.Widget.IconMenu.Item" parent="TextAppearance.Custom.Small">
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget.TabWidget" parent="TextAppearance.Custom.Button" />
+
+    <style name="TextAppearance.Custom.Widget.TextView">
+        <item name="@android:textColor">?attr/android:textColorPrimaryDisableOnly</item>
+        <item name="@android:textColorHint">?attr/android:textColorHint</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget.TextView.PopupMenu" parent="TextAppearance.Custom.Menu" />
+    <style name="TextAppearance.Custom.Widget.TextView.SpinnerItem" parent="TextAppearance.Custom.Menu" />
+
+    <style name="TextAppearance.Custom.Widget.DropDownItem" parent="TextAppearance.Custom.Menu">
+        <item name="@android:textColor">?attr/android:textColorPrimaryDisableOnly</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget.ActionMode"/>
+    <style name="TextAppearance.Custom.Widget.ActionMode.Title"
+        parent="TextAppearance.Custom.Title">
+        <item name="@android:textSize">@dimen/text_size_title</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.ActionMode.Title.Inverse"
+        parent="TextAppearance.Custom.Title.Inverse">
+        <item name="@android:textSize">@dimen/text_size_title</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.ActionMode.Subtitle"
+        parent="TextAppearance.Custom.Subhead">
+        <item name="@android:textSize">@dimen/text_size_subtitle</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.ActionMode.Subtitle.Inverse"
+        parent="TextAppearance.Custom.Subhead.Inverse">
+        <item name="@android:textSize">@dimen/text_size_subtitle</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.ActionBar.Title"
+        parent="TextAppearance.Custom.Title">
+        <item name="@android:textSize">@dimen/text_size_title</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.ActionBar.Title.Inverse"
+        parent="TextAppearance.Custom.Title.Inverse">
+        <item name="@android:textSize">@dimen/text_size_title</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.ActionBar.Subtitle"
+        parent="TextAppearance.Custom.Subhead">
+        <item name="@android:textSize">@dimen/text_size_subtitle</item>
+    </style>
+    <style name="TextAppearance.Custom.Widget.ActionBar.Subtitle.Inverse"
+        parent="TextAppearance.Custom.Subhead.Inverse">
+        <item name="@android:textSize">@dimen/text_size_subtitle</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget.ActionBar.Menu" parent="TextAppearance.Custom.Menu">
+        <item name="@android:textColor">?attr/android:actionMenuTextColor</item>
+        <item name="@android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget.ActionBar.Menu.Inverse" parent="TextAppearance.Custom.Menu.Inverse">
+        <item name="@android:textColor">?attr/android:actionMenuTextColor</item>
+        <item name="@android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Widget.Toolbar.Title"
+        parent="TextAppearance.Custom.Widget.ActionBar.Title" />
+    <style name="TextAppearance.Custom.Widget.Toolbar.Subtitle"
+        parent="TextAppearance.Custom.Widget.ActionBar.Subtitle" />
+
+    <style name="TextAppearance.Custom.WindowTitle" parent="TextAppearance.Custom.Title" />
+    <style name="TextAppearance.Custom.DialogWindowTitle" parent="TextAppearance.Custom.Title" />
+
+    <style name="TextAppearance.Custom.CalendarViewWeekDayView" parent="TextAppearance.Custom.Small">
+        <item name="@android:textStyle">bold</item>
+        <item name="@android:textColor">?attr/android:textColor</item>
+    </style>
+
+    <!--
+    <style name="TextAppearance.Custom.TimePicker.TimeLabel" parent="TextAppearance.Custom">
+        <item name="@android:textSize">@dimen/timepicker_time_label_size</item>
+        <item name="@android:textColor">?attr/android:textColorSecondaryInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.TimePicker.AmPmLabel" parent="TextAppearance.Custom">
+        <item name="@android:textSize">@dimen/text_size_medium</item>
+        <item name="@android:textAllCaps">true</item>
+        <item name="@android:textColor">?attr/android:textColorSecondaryInverse</item>
+        <item name="@android:textStyle">bold</item>
+    </style>
+    -->
+
+    <style name="TextAppearance.Custom.DatePicker.DayOfWeekLabel" parent="TextAppearance.Custom">
+        <item name="@android:includeFontPadding">false</item>
+        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+        <item name="@android:textSize">@dimen/datepicker_header_text_size</item>
+    </style>
+
+    <style name="TextAppearance.Custom.DatePicker.MonthLabel" parent="TextAppearance.Custom">
+        <item name="@android:includeFontPadding">false</item>
+        <item name="@android:textColor">?attr/android:textColorSecondary</item> <!-- selected should be accent -->
+        <item name="@android:textSize">@dimen/datepicker_selected_date_month_size</item>
+    </style>
+
+    <style name="TextAppearance.Custom.DatePicker.DayOfMonthLabel" parent="TextAppearance.Custom">
+        <item name="@android:includeFontPadding">false</item>
+        <item name="@android:textColor">?attr/android:textColorSecondary</item> <!-- selected should be accent -->
+        <item name="@android:textSize">@dimen/datepicker_selected_date_day_size</item>
+    </style>
+
+    <style name="TextAppearance.Custom.DatePicker.YearLabel" parent="TextAppearance.Custom">
+        <item name="@android:includeFontPadding">false</item>
+        <item name="@android:textColor">?attr/android:textColorSecondary</item> <!-- selected should be accent -->
+        <item name="@android:textSize">@dimen/datepicker_selected_date_year_size</item>
+    </style>
+
+    <style name="TextAppearance.Custom.DatePicker.List.YearLabel" parent="TextAppearance.Custom">
+        <item name="@android:textColor">?attr/android:textColorSecondary</item> <!-- selected should be accent -->
+        <item name="@android:textSize">@dimen/datepicker_year_label_text_size</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Notification">
+        <item name="@android:textColor">?attr/android:textColorSecondary</item>
+        <item name="@android:textSize">@dimen/notification_text_size</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Notification.Title">
+        <item name="@android:textColor">?attr/android:textColorSecondary</item>
+        <item name="@android:textSize">@dimen/notification_title_text_size</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Notification.Emphasis">
+        <item name="@android:textColor">#66000000</item>
+    </style>
+
+    <!-- Widget -->
+    <style name="Widget.Custom.Button.Primary" parent="@style/Widget.AppCompat.Light.ActionButton">
+        <item name="@android:background">@drawable/bg_button_primary</item>
         <item name="@android:textAppearance">?attr/android:textAppearanceButton</item>
     </style>
+
+    <!-- Widget -->
+    <style name="Widget.Custom.Button.Ghost" parent="@style/Widget.AppCompat.Light.ActionButton">
+        <item name="@android:background">@drawable/bg_button_ghost</item>
+        <item name="@android:textAppearance">?attr/android:textAppearanceButton</item>
+    </style>
+
+
 </resources>

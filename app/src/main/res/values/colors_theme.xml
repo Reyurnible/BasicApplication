@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Theme Color -->
+<resources>
+    <!-- Background -->
+    <color name="background_dark">#ff303030</color>
+    <color name="background_light">#ffeeeeee</color>
+    <color name="background_floating_dark">#ff424242</color>
+    <color name="background_floating_light">#ffeeeeee</color>
+
+    <!-- Text -->
+    <color name="primary_text">#de000000</color>
+    <color name="primary_text_inverse">#ffffffff</color>
+    <color name="secondary_text">#8a000000</color>
+    <color name="secondary_text_inverse">#b3ffffff</color>
+    <color name="body_text">#60000000</color>
+    <color name="body_text_disabled">#44000000</color>
+
+    <!-- Action Text-->
+    <color name="link_text_inverse">@color/widget_primary</color>
+    <color name="link_text">@color/widget_primary</color>
+    <!-- TODO: This is 40% alpha on the default accent color. -->
+    <color name="highlighted_text_inverse">#6680cbc4</color>
+    <!-- TODO: This is 40% alpha on the default accent color. -->
+    <color name="highlighted_text">#66009688</color>
+
+    <!-- Disable Alpha Filter -->
+    <item name="disabled_alpha" format="float" type="dimen">0.26</item>
+
+    <!-- For search-related UIs -->
+    <color name="search_url_text_normal">#7fa87f</color>
+    <color name="search_url_text_selected">@android:color/black</color>
+    <color name="search_url_text_pressed">@android:color/black</color>
+
+    <!-- Widget (Primary & accent colors) -->
+    <color name="widget_primary">@color/primary</color><!--#ff009688-->
+    <color name="widget_pressed_highlight">#fffeaa0c</color>
+    <color name="widget_selected_highlight">#fff17a0a</color>
+    <color name="widget_long_pressed_highlight">#ffffffff</color>
+    <!-- Switchの選択されていない状態-->
+    <color name="widget_thumb_normal">#fff1f1f1</color>
+    <color name="widget_thumb_disabled">#ffbdbdbd</color>
+
+    <!-- Foreground colors -->
+    <color name="hint_foreground_inverse">@color/bright_foreground_disabled_material_dark</color>
+    <color name="hint_foreground">@color/bright_foreground_disabled_material_light</color>
+    <color name="bright_foreground_inverse">@android:color/white</color>
+    <color name="bright_foreground">@android:color/black</color>
+    <!-- White 50% -->
+    <color name="bright_foreground_disabled_inverse">#80ffffff</color>
+    <!-- Black 50% -->
+    <color name="bright_foreground_disabled">#80000000</color>
+
+    <!-- Effect Color -->
+    <color name="ripple_material_dark">#40ffffff</color>
+    <color name="ripple_material_light">#40000000</color>
+
+    <color name="dim_foreground_light">#ff323232</color>
+    <color name="dim_foreground_disabled_light">#80323232</color>
+
+    <!-- Time picker defaults when no theme is set -->
+    <color name="timepicker_default_background">@color/primary_text</color>
+    <color name="timepicker_default_text_color">@android:color/black</color>
+    <color name="timepicker_default_ampm_selected_background_color">@color/widget_primary</color>
+    <color name="timepicker_default_ampm_unselected_background_color">@android:color/transparent</color>
+    <color name="timepicker_default_selector_color">@color/widget_primary</color>
+    <color name="timepicker_default_numbers_background_color">@android:color/transparent</color>
+
+    <!-- DatePicker colors -->
+    <color name="datepicker_default_header_selector_background_light">@android:color/white</color>
+    <color name="datepicker_default_header_dayofweek_background_color_light">#999999</color>
+    <color name="datepicker_default_normal_text_color_light">#ff999999</color>
+    <color name="datepicker_default_disabled_text_color_light">#80999999</color>
+    <color name="datepicker_default_selected_text_color_light">@color/primary_action_focused</color>
+    <color name="datepicker_default_pressed_text_color_light">@color/primary_action_pressed</color>
+    <color name="datepicker_default_circle_background_color_light">@color/widget_primary</color>
+    <color name="datepicker_default_view_animator_color_light">#f2f2f2</color>
+    <color name="datepicker_default_view_animator_color_dark">#ff303030</color>
+
+</resources>

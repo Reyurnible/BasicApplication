@@ -3,9 +3,9 @@
     <item android:state_checked="true">
         <shape
 	        android:innerRadius="0dp" 
-	        android:shape="ring"
+	        android:shape="oval"
 	        android:thickness="5dp">
-	        <solid android:color="@color/primary"/>
+	        <solid android:color="?attr/colorPrimary"/>
 	        <size android:width="@dimen/view_height_tiny" android:height="@dimen/view_height_tiny"/>
         </shape>
     </item>
@@ -14,7 +14,7 @@
 	        android:innerRadius="0dp"
 	        android:shape="ring"
 	        android:thickness="5dp">
-	        <solid android:color="@android:color/white"/>
+	        <solid android:color="?attr/colorSwitchThumbNormal"/>
             <size android:width="@dimen/view_height_tiny" android:height="@dimen/view_height_tiny"/>
         </shape>
 	</item>

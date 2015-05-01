@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="true" android:state_pressed="true">
         <inset xmlns:android="http://schemas.android.com/apk/res/android"
-            android:drawable="@drawable/bg_button_default"
+            android:drawable="@drawable/bg_button_primary_default"
             android:insetBottom="@dimen/button_inset_action_pressed"
             android:insetLeft="@dimen/button_inset_action_pressed"
             android:insetRight="@dimen/button_inset_action_pressed"
@@ -10,11 +10,11 @@
     </item>
     <item android:state_enabled="true" android:state_hovered="true">
         <inset xmlns:android="http://schemas.android.com/apk/res/android"
-            android:drawable="@drawable/bg_button_default"
+            android:drawable="@drawable/bg_button_primary_default"
             android:insetBottom="@dimen/button_inset_action_hovered"
             android:insetLeft="@dimen/button_inset_action_hovered"
             android:insetRight="@dimen/button_inset_action_hovered"
             android:insetTop="@dimen/button_inset_action_hovered" />
     </item>
-    <item android:drawable="@drawable/bg_button_default" />
+    <item android:drawable="@drawable/bg_button_primary_default" />
 </selector>

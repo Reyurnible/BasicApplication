@@ -30,4 +30,10 @@
         android:text="@string/title_activity_recycle_view"
         android:textSize="18sp" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>

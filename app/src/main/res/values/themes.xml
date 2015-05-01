@@ -1,40 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="Theme.Custom" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <!-- Color Palette-->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <!--
+        <item name="colorControlNormal">?attr/android:textColorSecondary</item>
+        -->
+        <item name="colorControlNormal">?attr/colorPrimaryDark</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
 
-        <!-- Text styles -->
-        <item name="android:textAppearance">@style/TextAppearance.Custom</item>
-        <!-- Light.DarkActionBar Color -->
+        <item name="colorControlHighlight">@color/ripple_material_light</item>
+        <item name="colorButtonNormal">@color/primary_action</item>
+        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
+
+        <item name="android:colorPressedHighlight">@color/widget_pressed_highlight</item>
+        <item name="android:colorLongPressedHighlight">@color/widget_long_pressed_highlight</item>
+        <item name="android:colorFocusedHighlight">@color/widget_selected_highlight</item>
+        <item name="android:colorMultiSelectHighlight">@color/widget_selected_highlight</item>
+        <item name="android:colorActivatedHighlight">@color/widget_selected_highlight</item>
+
+        <item name="android:colorForeground">@color/bright_foreground</item>
+        <item name="android:colorForegroundInverse">@color/bright_foreground_inverse</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:colorBackgroundCacheHint">@color/background_cache_hint_selector_light</item>
+        <!-- For material -->
+        <item name="android:disabledAlpha">@dimen/disabled_alpha</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+
+        <!-- Text Colors -->
         <item name="android:textColorPrimary">@color/primary_text</item>
         <item name="android:textColorPrimaryInverse">@color/primary_text_inverse</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:textColorSecondaryInverse">@color/secondary_text_inverse</item>
+        <item name="android:textColorTertiary">@color/secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/secondary_text_inverse</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/primary_text_disable_only</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/primary_text_disable_only_inverse</item>
+        <item name="android:textColorHint">@color/hint_foreground</item>
+        <item name="android:textColorHintInverse">@color/hint_foreground_inverse</item>
+        <item name="android:textColorHighlight">@color/highlighted_text</item>
+        <item name="android:textColorHighlightInverse">@color/highlighted_text_inverse</item>
+        <item name="android:textColorLink">@color/link_text</item>
+        <item name="android:textColorLinkInverse">@color/link_text_inverse</item>
+        <!-- Material Only -->
+        <item name="textColorSearchUrl">@color/search_url_text</item>
+        <item name="android:textColorAlertDialogListItem">@color/primary_text</item>
 
-        <!--
-        <item name="textColorTertiary">@color/secondary_text_material_light</item>
-        <item name="textColorTertiaryInverse">@color/secondary_text_material_dark</item>
-        <item name="textColorPrimaryDisableOnly">@color/primary_text_disable_only_material_light</item>
-        <item name="textColorPrimaryInverseDisableOnly">@color/primary_text_disable_only_material_dark</item>
-        <item name="textColorHint">@color/hint_foreground_material_light</item>
-        <item name="textColorHintInverse">@color/hint_foreground_material_dark</item>
-        <item name="textColorHighlight">@color/highlighted_text_material_light</item>
-        <item name="textColorHighlightInverse">@color/highlighted_text_material_dark</item>
-        <item name="textColorLink">@color/link_text_material_light</item>
-        <item name="textColorLinkInverse">@color/link_text_material_dark</item>
-        <item name="textColorSearchUrl">@color/search_url_text_light</item>
-        <item name="textColorAlertDialogListItem">@color/primary_text_material_light</item>
+        <!-- TextAppearance -->
+        <item name="android:textAppearance">@style/TextAppearance.Custom</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearance.Custom.Large</item>
+        <item name="android:textAppearanceLargeInverse">@style/TextAppearance.Custom.Large.Inverse</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.Custom.Medium</item>
+        <item name="android:textAppearanceMediumInverse">@style/TextAppearance.Custom.Medium.Inverse</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Custom.Small</item>
+        <item name="android:textAppearanceSmallInverse">@style/TextAppearance.Custom.Inverse</item>
 
-        <item name="textAppearanceLarge">@style/TextAppearance.Material.Large</item>
-        <item name="textAppearanceLargeInverse">@style/TextAppearance.Material.Large.Inverse</item>
-        <item name="textAppearanceMedium">@style/TextAppearance.Material.Medium</item>
-        <item name="textAppearanceMediumInverse">@style/TextAppearance.Material.Medium.Inverse</item>
-        <item name="textAppearanceSmall">@style/TextAppearance.Material.Small</item>
-        <item name="textAppearanceSmallInverse">@style/TextAppearance.Material.Small.Inverse</item>
-        -->
-        <item name="android:textAppearanceButton">@style/TextAppearance.Custom.Widget.Button</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.Custom.Widget.PopupMenu.Large</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/TextAppearance.Custom.Widget.PopupMenu.Small</item>
+
+        <!-- Edit Text Style -->
+        <item name="android:editTextColor">?attr/android:textColorPrimary</item>
+        <item name="android:editTextBackground">@drawable/bg_edit_text</item>
+
         <!-- Button Style -->
-        <item name="android:buttonStyle">@style/Widget.Custom.Button</item>
+        <item name="android:textAppearanceButton">@style/TextAppearance.Custom.Widget.Button</item>
+        <item name="android:buttonStyle">@style/Widget.Custom.Button.Primary</item>
 
         <!--
         <item name="buttonStyleSmall">@style/Widget.Material.Button.Small</item>
