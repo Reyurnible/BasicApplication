@@ -55,7 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
-        android:layout_gravity="center_horizontal"
-        android:textCursorDrawable=""/>
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

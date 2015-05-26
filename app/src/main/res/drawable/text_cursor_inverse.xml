@@ -16,4 +16,4 @@
 
 <nine-patch xmlns:android="http://schemas.android.com/apk/res/android"
     android:src="@drawable/text_cursor_alpha"
-    android:tint="@color/secondary_text_inverse" />
+    android:tint="@color/primary_text_inverse" />
