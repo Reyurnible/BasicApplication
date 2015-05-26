@@ -2,69 +2,105 @@
 <resources>
     <!-- Text styles -->
     <style name="TextAppearance.Custom" parent="@style/TextAppearance.AppCompat">
-        <item name="@android:textColor">?attr/android:textColorPrimary</item>
-        <item name="@android:textColorHint">?attr/android:textColorHint</item>
-        <item name="@android:textColorHighlight">?attr/android:textColorHighlight</item>
-        <item name="@android:textColorLink">?attr/android:textColorLink</item>
-        <item name="@android:textSize">@dimen/text_size_body_1</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/hint_text</item>
+        <item name="android:textColorHighlight">?attr/android:textColorHighlight</item>
+        <item name="android:textColorLink">?attr/android:textColorLink</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
     </style>
 
-    <!-- Deprecated text styles -->
     <style name="TextAppearance.Custom.Inverse">
-        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
-        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
-        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
-        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+        <item name="android:textColor">@color/primary_text_inverse</item>
+        <item name="android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="android:textColorLink">?attr/android:textColorLinkInverse</item>
     </style>
 
+    <!-- Size別のTextStyle -->
     <style name="TextAppearance.Custom.XLarge">
-        <item name="@android:textSize">@dimen/text_size_xlarge</item>
-        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextAppearance.Custom.Large">
-        <item name="@android:textSize">@dimen/text_size_large</item>
-        <item name="@android:textColor">?attr/android:textColorPrimary</item>
-    </style>
-
-    <style name="TextAppearance.Custom.Large.Inverse">
-        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
-        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
-        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
-        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
-    </style>
-
-    <!-- リストアイテムなどのタイトル用文字スタイル -->
-    <style name="TextAppearance.Custom.Title">
-        <item name="@android:textSize">@dimen/text_size_large</item>
-        <item name="@android:textColor">?attr/android:textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/primary_text</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextAppearance.Custom.Medium">
-        <item name="@android:textSize">@dimen/text_size_medium</item>
-        <item name="@android:textColor">?attr/android:textColorPrimary</item>
-    </style>
-
-    <style name="TextAppearance.Custom.Medium.Inverse">
-        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
-        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
-        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse
-        </item>
-        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/primary_text</item>
     </style>
 
     <style name="TextAppearance.Custom.Small">
-        <item name="@android:textSize">@dimen/text_size_small</item>
-        <item name="@android:textColor">?attr/android:textColorSecondary</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="TextAppearance.Custom.XLarge.Inverse">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:textColor">@color/primary_text_inverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Large.Inverse">
+        <item name="android:textColor">@color/primary_text_inverse</item>
+
+        <item name="android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Medium.Inverse">
+        <item name="android:textColor">@color/primary_text_inverse</item>
+        <item name="android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="android:textColorHighlight">?attr/android:textColorHighlightInverse
+        </item>
+        <item name="android:textColorLink">?attr/android:textColorLinkInverse</item>
     </style>
 
     <style name="TextAppearance.Custom.Small.Inverse">
-        <item name="@android:textColor">?attr/android:textColorTertiaryInverse</item>
-        <item name="@android:textColorHint">?attr/android:textColorHintInverse</item>
-        <item name="@android:textColorHighlight">?attr/android:textColorHighlightInverse
-        </item>
-        <item name="@android:textColorLink">?attr/android:textColorLinkInverse</item>
+        <item name="android:textColor">@color/secondary_text_inverse</item>
+        <item name="android:textColorHint">?attr/android:textColorHintInverse</item>
+        <item name="android:textColorHighlight">?attr/android:textColorHighlightInverse</item>
+        <item name="android:textColorLink">?attr/android:textColorLinkInverse</item>
+    </style>
+
+    <!--役割別のTextStyle -->
+    <style name="TextAppearance.Custom.Title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Custom.SubTitle">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+
+    <style name="TextAppearance.Custom.Body">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textColor">@color/body_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Widget TextStyle -->
+    <style name="TextAppearance.Custom.Button" parent="android:TextAppearance.Widget.Button">
+        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/primary_text_inverse</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Custom.EditText" parent="android:TextAppearance.Widget.EditText">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textColorHint">@color/secondary_text</item>
+    </style>
+
+    <style name="TextAppearance.Custom.EditText.Inverse" parent="android:TextAppearance.Widget.EditText">
+        <item name="android:textColor">@color/primary_text_inverse</item>
+        <item name="android:textColorHint">@color/secondary_text_inverse</item>
     </style>
 
 </resources>

@@ -1,32 +1,31 @@
 <resources>
-    <!-- Widget TextStyle -->
-    <style name="TextAppearance.Custom.Button" parent="android:TextAppearance.Widget.Button">
-        <item name="@android:textSize">@dimen/text_size_button</item>
-        <item name="@android:textAllCaps">false</item>
-        <item name="@android:textColor">?attr/android:textColorPrimaryInverse</item>
-        <item name="@android:textStyle">bold</item>
-    </style>
-
-    <style name="TextAppearance.Custom.EditText" parent="android:TextAppearance.Widget.EditText">
-        <item name="@android:textColor">?attr/android:textColorPrimary</item>
-        <item name="@android:textColorHint">?attr/android:textColorHint</item>
-    </style>
-
     <!-- Widget -->
+    <!-- Button -->
     <style name="CustomButtonPrimary" parent="Widget.AppCompat.Button">
         <item name="@android:background">@drawable/bg_button_primary</item>
-        <item name="@android:textAppearance">?attr/android:textAppearanceButton</item>
+        <item name="@android:textAppearance">@style/TextAppearance.Custom.Button</item>
     </style>
-    
-    
+
+    <style name="CustomButtonAccent" parent="Widget.AppCompat.Button">
+        <item name="@android:background">@drawable/bg_button_accent</item>
+        <item name="@android:textAppearance">@style/TextAppearance.Custom.Button</item>
+    </style>
+
+    <style name="CustomButtonGhost" parent="Widget.AppCompat.Button">
+        <item name="@android:background">@drawable/bg_button_ghost</item>
+        <item name="@android:textAppearance">@style/TextAppearance.Custom.Button</item>
+    </style>
+
+    <!-- EditText -->
     <style name="CustomEditTextPrimary" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textAppearance">@style/TextAppearance.Custom.EditText</item>
         <item name="android:textCursorDrawable">@drawable/text_cursor</item>
     </style>
 
     <style name="CustomEditText.Inverse" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/primary_text_inverse</item>
+        <item name="android:textAppearance">@style/TextAppearance.Custom.EditText.Inverse</item>
         <item name="android:textCursorDrawable">@drawable/text_cursor_inverse</item>
+
     </style>
 
 </resources>

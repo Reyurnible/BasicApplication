@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="CustomEditTextPrimary" parent="Widget.AppCompat.EditText">
         <item name="android:textColor">@color/primary_text</item>
         <item name="android:backgroundTint">@color/primary</item>
         <item name="android:textCursorDrawable">@drawable/text_cursor</item>
     </style>
+
+    <style name="CustomEditText.Inverse" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/primary_text_inverse</item>
+        <item name="android:backgroundTint">@color/primary_text_inverse</item>
+        <item name="android:textCursorDrawable">@drawable/text_cursor_inverse</item>
+    </style>
+
 </resources>

@@ -15,11 +15,6 @@
     <color name="accent_action_disable">#883ebbf6</color>
     <color name="accent_action_pressed">#2daae5</color>
 
-    <!-- Ghost Button Color -->
-    <color name="ghost_normal">#ffffff</color>
-    <color name="ghost_pressed">#6fff</color>
-    <color name="ghost_disable">#44b6b6b6</color>
-
     <!-- Text -->
     <color name="primary_text">#de000000</color>
     <color name="primary_text_inverse">#ffffffff</color>
@@ -27,29 +22,21 @@
     <color name="secondary_text_inverse">#b3ffffff</color>
     <color name="body_text">#60000000</color>
     <color name="body_text_disabled">#44000000</color>
+    <color name="hint_text">#bbbbbb</color>
 
-    <!-- Soeme Object Color -->
+    <!-- Soeme Shape Color -->
     <color name="screen_background">#ececec</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
 
+    <!-- Widget -->
+    <!-- Ghost Button Color -->
+    <color name="ghost_normal">#ffffff</color>
+    <color name="ghost_pressed">#6fff</color>
+    <color name="ghost_disable">#44b6b6b6</color>
+
+
     <!-- Page Params -->
-    <!-- Login -->
-    <color name="login_edittext_backgroundtint">#fff</color>
-    <!-- Home -->
-    <color name="home_menu_item_back">#ffffff</color>
-    <color name="home_menu_news">#29a456</color>
-    <color name="home_menu_analytics">#ec6355</color>
-    <color name="home_menu_preview">#4265ae</color>
-    <color name="home_menu_forum">#ef8f30</color>
-    <color name="home_menu_coupon">#b02521</color>
-    <color name="home_menu_functions">#422d54</color>
-    <!-- Dialog Button Color -->
-    <color name="dialog_ok_action_normal">#c30016</color>
-    <color name="dialog_ok_action_disable">#88c30016</color>
-    <color name="dialog_ok_action_pressed">#b20005</color>
-    <color name="dialog_cancel_action_normal">#898989</color>
-    <color name="dialog_cancel_action_disable">#88898989</color>
-    <color name="dialog_cancel_action_pressed">#787878</color>
+
 
 </resources>

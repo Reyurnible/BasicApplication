@@ -80,15 +80,11 @@
     <dimen name="text_size_xsmall">10sp</dimen>
     <dimen name="text_size_diff_large_small">6sp</dimen>
 
-    <dimen name="text_size_body_1">14sp</dimen>
-    <dimen name="text_size_body_2">14sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
     <dimen name="text_size_title">@dimen/text_size_large</dimen>
     <dimen name="text_size_subtitle">@dimen/text_size_medium</dimen>
-    <dimen name="text_size_headline">@dimen/text_size_xlarge</dimen>
-    <dimen name="text_size_subhead">@dimen/text_size_medium</dimen>
     <dimen name="text_size_menu">@dimen/text_size_medium</dimen>
     <dimen name="text_size_caption">@dimen/text_size_small</dimen>
     <dimen name="text_size_button">@dimen/text_size_medium</dimen>
-
 
 </resources>
