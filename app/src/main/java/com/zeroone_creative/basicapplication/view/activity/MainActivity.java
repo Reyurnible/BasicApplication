@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.zeroone_creative.basicapplication.R;
 import com.zeroone_creative.basicapplication.controller.util.SharedPreferencesUtil;
+import com.zeroone_creative.basicapplication.controller.util.VolleyJSONRequest;
 import com.zeroone_creative.basicapplication.view.fragment.LocationManagerFragment;
 import com.zeroone_creative.basicapplication.view.fragment.MainFragment_;
 
