@@ -22,3 +22,7 @@ proguard/
 .DS_Store
 # Windows thumbnail db
 Thumbs.db
+#Idea file
+.idea/libraries/
+.idea/workspace.xml
+.idea/misc.xml
